@@ -9,7 +9,7 @@ public class RewardsCalloutService {
         Http http = new Http();
         HttpResponse res;
         Integer statusCode;
-        try {
+        /*try {
             res = http.send(req);
             statusCode = res.getStatusCode();
             System.debug('Response Status: ' + statusCode);
@@ -17,7 +17,12 @@ public class RewardsCalloutService {
         } catch (Exception e) {
             System.debug('Error: ' + e.getMessage());
             statusCode = 500; // Internal Server Error
-        }
+        }*/
+        
+         res = http.send(req);
+            statusCode = res.getStatusCode();
+            System.debug('Response Status: ' + statusCode);
+            System.debug('Response Body: ' + res.getBody());
         return statusCode;
     }
 }
